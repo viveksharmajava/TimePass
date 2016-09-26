@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="myApp.js"></script>
+<script src="myCtrl.js"></script>
+<body>
+
+
+
+<div ng-app="myFirstAngularApp" ng-controller="myController"  ng-init="firstName='Vivek';myCol='lightblue';person={firstName:'Arun',lastName:'sharma'};intArray=[1,2,3,4,5];price='100'">
+<!-- w3-test-directive uncomment this line to actiave w3-test-directive -->
+
+
+  <p>Name: <input type="text" ng-model="name"></p>
+ 	<p ng-bind="name"></p>
+ 	<p data-ng-bind="firstName"></p>
+ 	<p>My First experession {{10+10}}</p>
+ 	<p> NG object test {{person.firstName}}</p>
+ 	<p> Ng Array intArray2 {{intArray[2]}}</p>
+ 	<p> Price ={{price | currency :"USD" : 2}}</p>
+ 	<p> Price ={{price | currency }}</p>
+ 	<h1 ng-click="changeName()">{{firstName}}</h1>
+ 	<ul>
+ 	<li ng-repeat=" x in names">{{x.name +" Company "+x.company}}</li>
+ 	</ul>
+ 	
+
+ <input type="text" ng-model="fName"  style="background-color:{{myCol}}" />
+ <input type="text" ng-model="lName" />
+ <br/>
+ <p> Your Detail is : {{fName +" "+ lName }}</p>
+ <p ng-bind="user"> </p>
+ 
+ <!--  check data binding -->
+ <input type="text" ng-model="quantity" />
+ <input type="text" ng-model="price" />
+ <p> Total value = {{quantity*price}}</p>
+</div>
+</body>
+</html>
+
+<!-- <script>
+
+var app = angular.module('myFirstAngularApp' ,[]);
+app.directive("w3TestDirective",function(){
+	return {
+		template :"Hello welcome to angular JS directive is smell very bad with this example"
+	}
+});
+    app.controller('myController' , function($scope){
+    	
+    	$scope.fName = "Vivek";
+    	$scope.lName= "Sharma";
+    	$scope.user = $scope.fName +" "+ $scope.lName;
+    });
+</script> -->
