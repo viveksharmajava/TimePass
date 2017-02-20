@@ -1,20 +1,10 @@
 package com.timePass.filter.authentication;
 
-import java.lang.reflect.Method;
-import java.util.List;
-import java.util.Set;
-import java.util.StringTokenizer;
-
-import javax.annotation.security.DenyAll;
-import javax.annotation.security.PermitAll;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MultivaluedMap;
-import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.Provider;
 @Provider
-public class AuthenticationFilter implements javax.ws.rs.container.ContainerRequestFilter{
+public class AuthenticationFilter 
+//implements javax.ws.rs.container.ContainerRequestFilter
+{/*
 
 	 @Context
 	 ResourceInfo resourceInfo;
@@ -77,12 +67,12 @@ public class AuthenticationFilter implements javax.ws.rs.container.ContainerRequ
 	            String userRole = "ADMIN";
 	            isAllowed = true;
 	            //Step 2. Verify user role
-	            /*if(rolesSet.contains(userRole))
+	            if(rolesSet.contains(userRole))
 	            {
 	                isAllowed = true;
-	            }*/
+	            }
 	        }
 	        return isAllowed;
 	    }
 
-}
+*/}

@@ -5,7 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
-@Path("/path")
+@Path(value="/mypath")
 public class PathUriMatchingExample {
 	
 	@GET
@@ -14,14 +14,14 @@ public class PathUriMatchingExample {
 		return Response.status(200).entity("Normal Uril Matching").build();
 	}
 	@GET
-	@Path("/country")
+	@Path(value="/country")
 	public Response getPathUriCountry(){
 		
 		return Response.status(200).entity(" Nested Uril Mappingi").build();
 	}
 	
 	@GET
-	@Path("/country/{countryName}")
+	@Path(value="/country/{countryName}")
 	public Response getCountryByName(@PathParam("countryName") String country){
 		return Response.status(200).entity("Country name="+country).build();
 	}

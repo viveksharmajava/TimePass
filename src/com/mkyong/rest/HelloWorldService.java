@@ -1,6 +1,5 @@
 package com.mkyong.rest;
 
-import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -10,12 +9,11 @@ import org.hibernate.SessionFactory;
 
 import com.timePass.util.HibernateUtils;
  
-@Path("/hello")
+@Path(value="/hello")
 public class HelloWorldService {
  
 	@GET
-	@Path("/{param}")
-	 @RolesAllowed("ADMIN")
+	@Path(value="/{param}")
 	public Response getMsg(@PathParam("param") String msg) {
     SessionFactory sf = HibernateUtils.getSessionFactory();
 		String output = "Jersey say sf : " + sf;
@@ -24,7 +22,7 @@ public class HelloWorldService {
  
 	}
 	@GET
-	@Path("/vip")
+	@Path(value="/vip")
 	public Response getUserVIP() {
 		 System.out.println("getUserVIP called=");
 		return Response.status(200).entity("getUserVIP is called").build();
