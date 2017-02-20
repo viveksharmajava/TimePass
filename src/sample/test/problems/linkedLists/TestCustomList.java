@@ -1,6 +1,5 @@
 package sample.test.problems.linkedLists;
 
-import org.eclipse.jdt.internal.compiler.ast.ThisReference;
 
 import sample.test.collection.FindLoopInList;
 

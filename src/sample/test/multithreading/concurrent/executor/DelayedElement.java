@@ -11,7 +11,10 @@ public class DelayedElement implements Delayed {
 	public Long getDelayTime() {
 		return delayTime;
 	}
-
+	public DelayedElement(String element, long delay) {
+		this.elementName = element;
+		this.delayTime = System.currentTimeMillis() + delay;
+	}
 	public void setDelayTime(Long delayTime) {
 		this.delayTime = delayTime;
 	}
@@ -33,15 +36,13 @@ public class DelayedElement implements Delayed {
 	@Override
 	public int compareTo(Delayed o) {
 		DelayedElement delayElem= (DelayedElement)o;
-		// TODO Auto-generated method stub
 		return this.getDelayTime().compareTo(delayElem.getDelayTime());
 	}
 
 	@Override
 	public long getDelay(TimeUnit unit) {
-		// TODO Auto-generated method stub
-		//unit.DAYS.t
-		return 0;
+		long diff = delayTime - System.currentTimeMillis();
+		return unit.convert(diff, TimeUnit.MILLISECONDS);
 	}
 
 }

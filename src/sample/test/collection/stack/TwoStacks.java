@@ -7,11 +7,11 @@ import java.lang.reflect.Array;
  * Implement two stacks in an array
 Create a data structure twoStacks that represents two stacks. Implementation of twoStacks should use only one array, i.e., both stacks should use the same array for storing elements. Following functions must be supported by twoStacks.
 
-push1(int x) –> pushes x to first stack
-push2(int x) –> pushes x to second stack
+push1(int x) ï¿½> pushes x to first stack
+push2(int x) ï¿½> pushes x to second stack
 
-pop1() –> pops an element from first stack and return the popped element
-pop2() –> pops an element from second stack and return the popped element
+pop1() ï¿½> pops an element from first stack and return the popped element
+pop2() ï¿½> pops an element from second stack and return the popped element
 
 Implementation of twoStack should be space efficient.
  */
@@ -19,7 +19,7 @@ public class TwoStacks<T> {
 	
 	
 	public static void main(String [] args){
-		TwoStacks <Integer> two  = new TwoStacks<>(Integer.class, 10);
+		TwoStacks <Integer> two  = new TwoStacks<Integer>(Integer.class, 10);
 		two.push1(10);
 		two.push1(20);
 		two.push2(100);
